@@ -4,6 +4,8 @@ plugins:
 3. https://www.npmjs.com/package/hex-rgba
 4. https://www.npmjs.com/package/react-fullpage
 5. https://www.npmjs.com/package/react-slick
+6. https://github.com/contra/react-responsive
+7. https://github.com/jonsuh/hamburgers
 
 
 
