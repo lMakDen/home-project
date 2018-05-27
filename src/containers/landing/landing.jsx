@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 
-import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
+import { SectionsContainer, Section } from 'react-fullpage';
+import MediaQuery from 'react-responsive';
 
 import Menu from './components/menu';
+import MobileMenu from './components/mobileMenu';
 import Head from './components/header';
 import Slider from './components/slider';
 import Focus from './components/focus';
@@ -49,7 +51,12 @@ export default class Landing extends Component {
         return (
             <div>
                 <header>
-                    <Menu/>
+                    <MediaQuery query="(min-device-width: 576px)">
+                        <Menu/>
+                    </MediaQuery>
+                    <MediaQuery query="(max-device-width: 575px)">
+                        <MobileMenu/>
+                    </MediaQuery>
                 </header>
                 <SectionsContainer {...options}>
                     <Section >

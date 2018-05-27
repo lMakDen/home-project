@@ -5,17 +5,6 @@ import hexToRgba from 'hex-rgba';
 
 export default class Tile extends Component{
     render(){
-        let settings = {
-            dots: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: false,
-            // fade: true,
-            focusOnSelect:true,
-            // centerMode: true
-        };
         const { color, url } = this.props;
         return (
             <SliderBlockContsiner>

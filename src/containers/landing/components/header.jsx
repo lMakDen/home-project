@@ -45,6 +45,9 @@ const HeaderTitle = styled.div`
       width: 50%;
       text-align: center;
       margin-bottom: 100px;
+      @media (max-width: 698px) {
+        font-size: 32px;
+      }
 `;
 const HeaderButton = styled.a`
      padding: 10px 20px;
@@ -62,7 +65,11 @@ const HeaderFooterContainer = styled.div`
       display:flex;
       width: 40%;
       justify-content: space-around;
+      @media (max-width: 698px) {
+        width: 90%;
+      }
 `;
+
 
 const HeaderFooterFirst = styled.div`
       text-align: center;
