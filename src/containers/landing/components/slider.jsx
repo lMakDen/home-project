@@ -52,18 +52,18 @@ export default class Slider extends Component {
                     {this.props.slides.map((slide, index) => (
                         <div
                             className={`slider__slide ${activeSlide === index && 's--active'} ${ prevSlide === index && 's--prev'}`}
-                            key={slide.city}
+                            key={slide.city + index}
                         >
                             <div className="slider__slide-content">
                                 <h3 className="slider__slide-subheading">{slide.country || slide.city}</h3>
                                 <h2 className="slider__slide-heading">
-                                    {slide.city.split('').map(l => <span>{l}</span>)}
+                                    {slide.city.split('').map((item, index) => <span key={`span_${index}`}>{item}</span>)}
                                 </h2>
                                 <p className="slider__slide-readmore">read more</p>
                             </div>
                             <div className="slider__slide-parts">
                                 {[...Array(this.IMAGE_PARTS).fill()].map((x, i) => (
-                                    <div className="slider__slide-part" key={i}>
+                                    <div className="slider__slide-part" key={`img_container_${i}`}>
                                         <div className="slider__slide-part-inner" style={{ backgroundImage: `url(${slide.img})` }} />
                                     </div>
                                 ))}

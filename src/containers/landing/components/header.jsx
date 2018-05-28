@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom'
 
 import styled from "styled-components";
 import FaCheckCircle from 'react-icons/lib/fa/check-circle';
@@ -11,7 +12,7 @@ export default class Header extends Component{
                 <HeaderTitle>
                     We design things with love and passion
                 </HeaderTitle>
-                <HeaderButton>LET`S START</HeaderButton>
+                <HeaderButton  to="/app">LET`S START</HeaderButton>
                 <HeaderFooterContainer>
                     <HeaderFooterFirst>
                         <FaCheckCircle/>
@@ -49,7 +50,7 @@ const HeaderTitle = styled.div`
         font-size: 32px;
       }
 `;
-const HeaderButton = styled.a`
+const HeaderButton = styled(Link)`
      padding: 10px 20px;
      background-color: #fc5f45;
      border-radius: 25px;
@@ -61,6 +62,7 @@ const HeaderButton = styled.a`
         color: #3f4049;
      }
 `;
+
 const HeaderFooterContainer = styled.div`
       display:flex;
       width: 40%;
