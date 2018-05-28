@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import styled from "styled-components";
-// import * as actions from './actions';
-import * as actions from './actions/index'
+import * as actions from './actions/index';
+import map from 'lodash';
 
 class Application extends Component {
 
@@ -13,9 +13,18 @@ class Application extends Component {
     }
 
     render() {
+        const { cryptoList } = this.props;
+        let cryptoListObject = cryptoList ? Object.keys(cryptoList.data) : [];
+        let removed = cryptoListObject.splice(0, 5);
+
         return (
             <HeaderSection>
-                hello world
+                { removed.map((item, i) =>{
+                    return <div style={{display: 'flex', alignItems: 'center'}}>
+                        <div>{cryptoList.data[item].CoinName}</div>
+                        <img src={`https://www.cryptocompare.com${cryptoList.data[item].ImageUrl}`} alt="error"/>
+                    </div>
+                })}
             </HeaderSection>
         );
     }
@@ -30,7 +39,7 @@ const HeaderSection = styled.div`
 `;
 function mapStateToProps(state) {
     return {
-        car: state.crypto
+        cryptoList: state.crypto
     };
 }
 export default connect(mapStateToProps)(Application);

@@ -2,7 +2,9 @@ import axios from 'axios';
 
 export const requestCryptoList = () => {
     return function action(dispatch) {
-        axios.get('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR')
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const url = "https://www.cryptocompare.com/api/data/coinlist";
+        axios.get(proxyurl + url)
             .then(function (response) {
                 dispatch(requestCryptoListSuccess(response))
             })
@@ -15,7 +17,7 @@ export const requestCryptoList = () => {
 export const requestCryptoListSuccess = ( res ) => {
     return {
         type: "REQUEST_CRYPTO_LIST_SUCCESS",
-        data: res.data,
+        data: res.data.Data,
     }
 };
 
