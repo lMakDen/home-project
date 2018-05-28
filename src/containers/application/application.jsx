@@ -29,7 +29,6 @@ const HeaderSection = styled.div`
         flex-direction: column;
 `;
 function mapStateToProps(state) {
-    debugger
     return {
         car: state.crypto
     };
