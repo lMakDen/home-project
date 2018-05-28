@@ -13,16 +13,28 @@ import logo4 from './../../../assets/images/4.jpg';
 
 export default class Focus extends Component{
     render(){
-        var settings = {
+        const settings = {
             dots: true,
             infinite: true,
             speed: 500,
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
-            // fade: true,
             focusOnSelect:true,
-            // centerMode: true
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    },
+                },
+                {
+                    breakpoint: 980,
+                    settings: {
+                        slidesToShow: 2,
+                    },
+                },
+            ],
         };
         return (
             <FocusSection>
@@ -56,11 +68,17 @@ const FocusTitle = styled.div`
         width: 50%;
         text-align: center;
         margin: auto auto 50px auto;
-        padding-top:100px
+        padding-top: 100px;
+        @media (max-width: 698px) {
+            font-size: 32px;
+        }
 `;
 const FocusContent = styled.div`
         text-align: center;
         font-family: 'Lato-Regular';
         font-size: 24px;
         color: grey;
+        @media (max-width: 698px) {
+            font-size: 14px;
+        }
 `;

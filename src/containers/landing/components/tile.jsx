@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
-import styled from "styled-components";
+import PropTypes from 'prop-types';
 
+import styled from "styled-components";
 import hexToRgba from 'hex-rgba';
 
 export default class Tile extends Component{
+    static propTypes = {
+        color: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+    };
+
     render(){
         const { color, url } = this.props;
         return (

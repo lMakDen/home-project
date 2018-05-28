@@ -5,7 +5,9 @@ import Hamburger from 'react-hamburgers';
 import Fade from 'react-reveal/Fade';
 
 export default class MobileMenu extends Component{
-    state = { show: false };
+    state = {
+        show: false
+    };
 
     render(){
         return (
@@ -165,7 +167,6 @@ const MenuLink = styled.a`
   position: absolute;
   width: 250px;
   height: 100px;
-  // background: #FDA8CF;
   background: #feb960;
   border-radius: 75px;
   z-index: -1;
@@ -173,7 +174,6 @@ const MenuLink = styled.a`
 }
 &:hover:after {
   content: '';
-  // background: #F3CE5E;
   background: #b27cf5;
   animation: 2s ${counterclockwise} infinite;
   display: block;
