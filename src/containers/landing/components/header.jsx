@@ -58,6 +58,7 @@ const HeaderButton = styled(Link)`
      color: white; 
      font-family: 'Lato-Italic';
      margin-bottom: 100px;
+     text-decoration: none;
      &:hover{
         color: #3f4049;
      }
