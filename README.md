@@ -11,4 +11,3 @@ plugins:
 
 
 
-https://lmakden.github.io/game/public/
