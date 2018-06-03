@@ -28,7 +28,7 @@ export const requestCryptoListError = ( error ) => {
 };
 
 export const requestCryptoPrice = ( res, num) => {
-debugger
+
         let cryptoListObject = res ? Object.keys(res) : [];
         let removed = cryptoListObject.slice(num - SHOW_ELEMENTS, num);
         let url = 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=';

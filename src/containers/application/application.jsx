@@ -52,7 +52,6 @@ class Application extends Component {
     handleChangeCounter = () =>{
         const { counter, priceCounter } = this.state;
         const { cryptoList } = this.props;
-        debugger
         this.setState({
             counter: counter + SHOW_ELEMENTS,
             priceCounter: priceCounter + SHOW_ELEMENTS,
